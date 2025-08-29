@@ -14,30 +14,30 @@ Icecast 是流媒体服务器，负责将你的音频流分发到互联网；而
 关于这个XML的官方文档(https://icecast.org/docs/icecast-2.4.1/config-file.html)
 
 但是没必要调这么多 你只需要修改以下几个地方：
-- ####  <source-password> （源密码）：
+- ####  source-password（源密码）：
 拿到它的人可以冒充你进行广播，直接向你的听众发送任何他们想发送的内容
 
-- #### <admin-password>（管理员密码）：
+- #### admin-password（管理员密码）：
 保护你的服务器设置不被篡改。
-- #### <relay-password>（中继密码）：
+- #### relay-password（中继密码）：
 目前暂时用不到。但是为了安全起见，你还是改一下。
 
 把hackme改为自己的密码，推荐使用复杂密码，包含字母、数字和特殊字符。比如:20250829@0748! (~~除非你真的想被hack~~)
 
-- #### <hostname>（主机名）：
+- #### hostname（主机名）：
 你的服务器主机名。一般保持localhost不变即可。
-- #### <listen-socket>(监听端口):
+- #### listen-socket(监听端口):
 Icecast的监听端口。默认是8000
 
 #### 可能会有影响的参数，自行调节:
 <source-timeout>:如果启用，这将在客户端首次连接时提供突发数据，从而显著减少需要大量缓冲的监听器的启动时间。然而，这也会显著增加源客户端和监听客户端之间的延迟。对于低延迟设置，您可能需要禁用此功能。
 
 #### 其他用来描述你自己电台的参数
-- #### <location>（位置）：
+- #### location（位置）：
 描述你的服务器位置。比如:Beijing,China
-- #### <name>（名称）：
+- #### name（名称）：
 你的服务器名称，比如：Godspeeddoge's Live Stream
-- #### <description>（描述）：
+- #### description（描述）：
 对服务器的简单描述。
 (大多数没必要改因为你可以等下可以直接在BUTT改)
 
