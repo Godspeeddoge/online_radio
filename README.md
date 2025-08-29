@@ -8,13 +8,13 @@
 Icecast 是流媒体服务器，负责将你的音频流分发到互联网；而BUTT是推流软件，负责将你的音频流推送到Icecast服务器.
 下载windows版即可
 
-### 2.配置Icecast
+###  2.配置Icecast
 进入Icecast安装目录,打开icecast.xml文件。
 
 关于这个XML的官方文档(https://icecast.org/docs/icecast-2.4.1/config-file.html)
 
 但是没必要调这么多 你只需要修改以下几个地方：
-- #### <source-password>（源密码）：
+- ####  <source-password> （源密码）：
 拿到它的人可以冒充你进行广播，直接向你的听众发送任何他们想发送的内容
 
 - #### <admin-password>（管理员密码）：
@@ -29,10 +29,10 @@ Icecast 是流媒体服务器，负责将你的音频流分发到互联网；而
 - #### <listen-socket>(监听端口):
 Icecast的监听端口。默认是8000
 
-####可能会有影响的参数，自行调节:
+#### 可能会有影响的参数，自行调节:
 <source-timeout>:如果启用，这将在客户端首次连接时提供突发数据，从而显著减少需要大量缓冲的监听器的启动时间。然而，这也会显著增加源客户端和监听客户端之间的延迟。对于低延迟设置，您可能需要禁用此功能。
 
-####其他用来描述你自己电台的参数
+#### 其他用来描述你自己电台的参数
 - #### <location>（位置）：
 描述你的服务器位置。比如:Beijing,China
 - #### <name>（名称）：
@@ -44,16 +44,16 @@ Icecast的监听端口。默认是8000
 保存后，运行在Icecast根目录下的icecast.bat。如果有Windows防火墙弹窗请允许。
 打开浏览器输入  **本机IP地址:8000** 来看是否运行（如果你改了端口你就用你改了的端口）
 ### 3.配置BUTT
-####打开Settings-Main:
+#### 打开Settings-Main:
 - ##### Server选项下-点开ADD-选择Icecast
 - Address: 填 IP地址或者你的公网地址
 - Port:填你刚才在xml设置的监听端口
 - Password:填写你的Source-passwords。
 
-####自定义你的Stream infos:
+#### 自定义你的Stream infos:
 - 不详细介绍 自己玩~
 
-####打开Settings-Audio:
+#### 打开Settings-Audio:
 这里是关于你的音频输入.你可以更改你串流的音质，声道，比特率；声音来源；录音（录制电台）音质
 - 声道肯定双声道(Stereo),采样率44.1k往上即可
 - 建议Streaming选择OPUS-128K 这已经足以够用，FLAC再好也听不出什么差别其实~~（反正玩玩看你了）~~
